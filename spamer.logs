@@ -1,0 +1,14 @@
+send 0_manul.jpg
+successfuly send 0_manul.jpg
+send 1_manul.jpg
+successfuly send 1_manul.jpg
+send 2_manul.jpg
+successfuly send 2_manul.jpg
+send 3_manul.jpg
+successfuly send 3_manul.jpg
+send 4_manul.jpg
+successfuly send 4_manul.jpg
+send 5_manul.jpg
+successfuly send 5_manul.jpg
+send 6_manul.jpg
+error in fput_object: HTTPConnectionPool(host='minio1', port=9000): Max retries exceeded with url: /bt2/6_manul.jpg (Caused by ResponseError('too many 500 error responses'))

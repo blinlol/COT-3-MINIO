@@ -34,4 +34,3 @@ for i in range(4000):
     except Exception as e:
         print(f"error in fput_object: {e}")
         break
-    # sleep(2)

@@ -1,0 +1,101 @@
+INFO: Formatting 1st pool, 1 set(s), 1 drives per set.
+INFO: WARNING: Host local has more than 0 drives of set. A host failure will result in data becoming unavailable.
+MinIO Object Storage Server
+Copyright: 2015-2024 MinIO, Inc.
+License: GNU AGPLv3 - https://www.gnu.org/licenses/agpl-3.0.html
+Version: RELEASE.2024-12-13T22-19-12Z (go1.23.4 linux/amd64)
+
+API: http://172.23.0.3:9000  http://127.0.0.1:9000 
+WebUI: http://172.23.0.3:9001 http://127.0.0.1:9001  
+
+Docs: https://docs.min.io
+
+API: PutObject(bucket=bt2, object=6_manul.jpg)
+Time: 09:02:17 UTC 12/21/2024
+DeploymentID: ec2a59ac-e90b-4667-95bf-b2f784f3bcc2
+RequestID: 181325B43254CC2B
+RemoteHost: 172.23.0.2
+Host: minio1:9000
+UserAgent: MinIO (Linux; x86_64) minio-py/7.2.12
+Error: no space left on device (syscall.Errno)
+       5: internal/logger/logger.go:268:logger.LogIf()
+       4: cmd/logging.go:112:cmd.internalLogIf()
+       3: cmd/api-errors.go:2587:cmd.toAPIError()
+       2: cmd/object-handlers.go:2063:cmd.objectAPIHandlers.PutObjectHandler()
+       1: net/http/server.go:2220:http.HandlerFunc.ServeHTTP()
+INFO: 
+ You are running an older version of MinIO released 4 days before the latest release 
+ Update: Run `mc admin update ALIAS` 
+
+
+
+API: PutObject(bucket=bt2, object=6_manul.jpg)
+Time: 09:02:17 UTC 12/21/2024
+DeploymentID: ec2a59ac-e90b-4667-95bf-b2f784f3bcc2
+RequestID: 181325B43408F849
+RemoteHost: 172.23.0.2
+Host: minio1:9000
+UserAgent: MinIO (Linux; x86_64) minio-py/7.2.12
+Error: no space left on device (syscall.Errno)
+       5: internal/logger/logger.go:268:logger.LogIf()
+       4: cmd/logging.go:112:cmd.internalLogIf()
+       3: cmd/api-errors.go:2587:cmd.toAPIError()
+       2: cmd/object-handlers.go:2063:cmd.objectAPIHandlers.PutObjectHandler()
+       1: net/http/server.go:2220:http.HandlerFunc.ServeHTTP()
+
+API: PutObject(bucket=bt2, object=6_manul.jpg)
+Time: 09:02:17 UTC 12/21/2024
+DeploymentID: ec2a59ac-e90b-4667-95bf-b2f784f3bcc2
+RequestID: 181325B44EA9A378
+RemoteHost: 172.23.0.2
+Host: minio1:9000
+UserAgent: MinIO (Linux; x86_64) minio-py/7.2.12
+Error: no space left on device (syscall.Errno)
+       5: internal/logger/logger.go:268:logger.LogIf()
+       4: cmd/logging.go:112:cmd.internalLogIf()
+       3: cmd/api-errors.go:2587:cmd.toAPIError()
+       2: cmd/object-handlers.go:2063:cmd.objectAPIHandlers.PutObjectHandler()
+       1: net/http/server.go:2220:http.HandlerFunc.ServeHTTP()
+
+API: PutObject(bucket=bt2, object=6_manul.jpg)
+Time: 09:02:18 UTC 12/21/2024
+DeploymentID: ec2a59ac-e90b-4667-95bf-b2f784f3bcc2
+RequestID: 181325B482A9A11D
+RemoteHost: 172.23.0.2
+Host: minio1:9000
+UserAgent: MinIO (Linux; x86_64) minio-py/7.2.12
+Error: no space left on device (syscall.Errno)
+       5: internal/logger/logger.go:268:logger.LogIf()
+       4: cmd/logging.go:112:cmd.internalLogIf()
+       3: cmd/api-errors.go:2587:cmd.toAPIError()
+       2: cmd/object-handlers.go:2063:cmd.objectAPIHandlers.PutObjectHandler()
+       1: net/http/server.go:2220:http.HandlerFunc.ServeHTTP()
+
+API: PutObject(bucket=bt2, object=6_manul.jpg)
+Time: 09:02:20 UTC 12/21/2024
+DeploymentID: ec2a59ac-e90b-4667-95bf-b2f784f3bcc2
+RequestID: 181325B4E4120244
+RemoteHost: 172.23.0.2
+Host: minio1:9000
+UserAgent: MinIO (Linux; x86_64) minio-py/7.2.12
+Error: no space left on device (syscall.Errno)
+       5: internal/logger/logger.go:268:logger.LogIf()
+       4: cmd/logging.go:112:cmd.internalLogIf()
+       3: cmd/api-errors.go:2587:cmd.toAPIError()
+       2: cmd/object-handlers.go:2063:cmd.objectAPIHandlers.PutObjectHandler()
+       1: net/http/server.go:2220:http.HandlerFunc.ServeHTTP()
+
+API: PutObject(bucket=bt2, object=6_manul.jpg)
+Time: 09:02:23 UTC 12/21/2024
+DeploymentID: ec2a59ac-e90b-4667-95bf-b2f784f3bcc2
+RequestID: 181325B5A511813C
+RemoteHost: 172.23.0.2
+Host: minio1:9000
+UserAgent: MinIO (Linux; x86_64) minio-py/7.2.12
+Error: no space left on device (syscall.Errno)
+       5: internal/logger/logger.go:268:logger.LogIf()
+       4: cmd/logging.go:112:cmd.internalLogIf()
+       3: cmd/api-errors.go:2587:cmd.toAPIError()
+       2: cmd/object-handlers.go:2063:cmd.objectAPIHandlers.PutObjectHandler()
+       1: net/http/server.go:2220:http.HandlerFunc.ServeHTTP()
+INFO: Exiting on signal: TERMINATED
