@@ -1,0 +1,81 @@
+services:
+  minio1:
+    build: 
+      context: .
+      dockerfile: minio.dockerfile
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIOUSER}
+      MINIO_ROOT_PASSWORD: ${MINIOPASSWORD}
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-I", "http://minio1:9000/minio/health/live"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    
+  # minio-tier:
+  #   image: quay.io/minio/minio
+  #   environment:
+  #     MINIO_ROOT_USER: ${MINIOUSER}
+  #     MINIO_ROOT_PASSWORD: ${MINIOPASSWORD}
+  #   ports:
+  #     - "9002:9000"
+  #     - "9003:9001"
+  #   volumes:
+  #     - minio-tier:/data
+  #   command: "server /data --console-address :9001"
+  #   healthcheck:
+  #     test: ["CMD", "curl", "-I", "http://minio-tier:9000/minio/health/live"]
+  #     interval: 1m30s
+  #     timeout: 30s
+  #     retries: 5
+  #     start_period: 30s
+
+  # minio-tier-setup:
+  #   build:
+  #     dockerfile: minio-tier-setup.dockerfile
+  #     context: .
+  #   depends_on:
+  #     minio-tier:
+  #       condition: service_healthy
+  #     minio1:
+  #       condition: service_healthy  
+
+  # minio-setup:
+  #   build: 
+  #     dockerfile: minio-setup.dockerfile
+  #     context: .
+  #   depends_on:
+  #     minio-tier-setup: 
+  #       condition: service_completed_successfully
+  
+  spamer:
+    build:
+      context: .
+      dockerfile: spamer.dockerfile
+    env_file:
+      - .env
+    # depends_on:
+    #   minio-setup:
+    #     condition: service_completed_successfully
+
+volumes:
+  minio-data:
+    driver: local
+    driver_opts:
+      o: size=10m
+      device: tmpfs
+      type: tmpfs
+  
+  # minio-tier:
+  #   driver: local
+  #   driver_opts:
+  #     o: size=300m
+  #     device: tmpfs
+  #     type: tmpfs
+    
